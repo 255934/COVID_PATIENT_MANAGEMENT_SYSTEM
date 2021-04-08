@@ -36,11 +36,24 @@ Application will be running on desktops in hospitals of our client to store data
 The application is written in C and no extra dependencies are required on the clients system.
 
 # Detail requirements
-## High Level Requirements:
---- TBD in Tabular Format 
--- ID | Description | Status (Implemented/Future)
-
+## High Level Requirements: 
+| ID | Description | Category | Status | 
+| ----- | ----- | ------- | ---------|
+| HR01 | Digitizing Patient Record| Techincal | TBD-S1 | 
+| HR02 | Vaccine Registration | Techincal | TBD-S1 |
 
 ##  Low level Requirements:
---- TBD in Tabular Format 
--- ID | Description | Status (Implemented/Future)
+ 
+| ID | Description | HLR ID | Status (Implemented/Future) |
+| ------ | --------- | ------ | ----- |
+| LR01 |Providing a login system which will give access to only authorised personal| HR01 | TBD-S1 |
+| LR01.1 | Adding a new patient details to the record | HR01 | TBD-S1 |
+| LR01.2 | Display all record that are present in the file | HR01 | TBD-S1 |
+| LR01.3| Update the record of patient if mistake is made, using adharcard number | HR01 | TBD-S1 |
+| LR01.4 |Search a paitient using adharcard number | HR01 | TBD-S1 |
+| LR01.5 |Delete patient Record from the file | HR01 | TBD-S1 |
+| LR02 |The hospital capacity of vacinating people per day should be pre feed| HR02 | TBD-S1 |
+| LR02.1 | New registration for vaccine shot after checking if slot is available | HR02 | TBD-S1 |
+| LR02.2 | Deleting the vaccine registration for a person using adharcard number| HR02 | TBD-S1 |
+| LR02.3 | Veiw all registration for a particular date (dd-mm-yyyy) | HR02 | TBD-S1 |
+
