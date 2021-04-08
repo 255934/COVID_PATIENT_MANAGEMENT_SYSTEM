@@ -1,13 +1,11 @@
 # Requirements
 ## Introduction
- --- TBD 
+ Soul aim of the project is to digitize the process of maintianing records at an level of indivisual hospitals. Instead of keeping physical records which can be damaged or lost, saving records in a file. Also to keep track of vaccine registration at a given hospital.
 
 ## Research
-![Description](Link to Pic)
--- Content 
+The project is a small component of a large system, this can be integrated with insurance system so that insurance can be marketed to a target audience. 
 ## Cost and Features
-![Description](Link to Pic)
--- Content 
+
 ## Defining Our System
    ![Our System](https://github.com/255934/COVID_PATIENT_MANAGEMENT_SYSTEM/blob/main/6_ImagesAndVideos/temp_system_diagram.png)
     
