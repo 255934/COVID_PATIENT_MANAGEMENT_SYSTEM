@@ -9,7 +9,13 @@
 ![Description](Link to Pic)
 -- Content 
 ## Defining Our System
-    -- TBD
+   ![Our System](https://github.com/255934/COVID_PATIENT_MANAGEMENT_SYSTEM/blob/main/6_ImagesAndVideos/temp_system_diagram.png)
+    
+    
+    - The user has to login. The access id and password are pre feed into the system.
+    - Then he will be able to either register for vaccine or patient records
+    - Patient records has features such as add,view,search,update,delete
+    - Vaccine registration has features such as make appointement,view, delete
 ## SWOT ANALYSIS
 ![SWOT-Analysis](https://github.com/255934/COVID_PATIENT_MANAGEMENT_SYSTEM/blob/main/6_ImagesAndVideos/SWOT.jpg)
 
