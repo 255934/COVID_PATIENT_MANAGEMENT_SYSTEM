@@ -11,7 +11,7 @@
 ## Defining Our System
     -- TBD
 ## SWOT ANALYSIS
-![SWOT-Analysis](https://github.com/255934/COVID_PATIENT_MANAGEMENT_SYSTEM/blob/main/6_ImagesAndVideos/images/SWOT.jpg)
+![SWOT-Analysis](https://github.com/255934/COVID_PATIENT_MANAGEMENT_SYSTEM/blob/main/6_ImagesAndVideos/SWOT.jpg)
 
 # 4W&#39;s and 1&#39;H
 
