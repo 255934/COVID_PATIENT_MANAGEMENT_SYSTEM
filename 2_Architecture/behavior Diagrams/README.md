@@ -1,4 +1,5 @@
 # Behavior Diagrams
 
-## Add all the Behavior diagrams implememted
+## USE CASE DIAGRAM:
+![USE CASE](https://github.com/255934/COVID_PATIENT_MANAGEMENT_SYSTEM/blob/main/6_ImagesAndVideos/usecase.jpg)
 
