@@ -14,7 +14,7 @@ void test_vac_add(void);
 void test_dlt(void);
 void test_exit(void);
 void test_func_list(void);
-void test_gotoxy(void);
+
 void test_search_rec(void);
 void test_vac_search_rec(void);
 /* Required by the unity test framework */
@@ -34,18 +34,14 @@ int main()
   RUN_TEST(test_dlt);
   RUN_TEST(test_exit);
   RUN_TEST(test_func_list);
-  RUN_TEST(test_gotoxy);
+
   RUN_TEST(test_search_rec);
   RUN_TEST(test_vac_search_rec);
 
   /* Close the Unity Test Framework */
   return UNITY_END();
 }
-void test_gotoxy()
-{
-  TEST_ASSERT_EQUAL(5, gotoxy(2,3));
 
-}
 void test_search_rec()
 {
   TEST_ASSERT_EQUAL(1,Search_rec(1,"Milan"));

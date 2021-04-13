@@ -1,7 +1,6 @@
 //HEADER FILES
 #include<stdio.h>//Use for standard I/O Operation
 
-#include<conio.h>//Use for delay(),getch(),gotoxy(),etc.
 #include<ctype.h>//se for toupper(), tolower(),etc
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
@@ -17,12 +16,12 @@ int Dlt_rec(int read, char temp[])
 	ft=fopen("temp_file2.dat","w+");
 	ek=fopen("Record2.dat","r");
 	printf("\n\n\t\t\t!!!!!!!!!!!!!! Delete Patients Record !!!!!!!!!!!!!\n");
-	gotoxy(12,8);
+
 	printf("\n Enter Patient Name to delete: ");
 	fflush(stdin);
 	if(read==0)
 	{
-	gets(name);
+	scanf("%s",name);
 	name[0]=toupper(name[0]);
 	}
 	else

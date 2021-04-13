@@ -1,7 +1,7 @@
 //HEADER FILES
 #include<stdio.h>//Use for standard I/O Operation
 
-#include<conio.h>//Use for delay(),getch(),gotoxy(),etc.
+
 #include<ctype.h>//se for toupper(), tolower(),etc
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
@@ -29,15 +29,14 @@ do
 		printf("\n\n\n\t\t\t\t\t...Login Successfull...");
 		
 		
-		getch();
-		MainMenu(0);//call MainMenu function
+			MainMenu(0);//call MainMenu function
 		break;
 	}
 	else
 	{
 		printf("\n\t\t\tPassword in incorrect:( Try Again :)");
 		e++;
-		getch();
+		
 	}
 
 }
@@ -46,7 +45,7 @@ while(e<=2);
 	{
 	printf("%d",e);
 	printf("You have cross the limit. You cannot login. :( :(");
-	getch();
+	
     ex_it(0);
 	}
  

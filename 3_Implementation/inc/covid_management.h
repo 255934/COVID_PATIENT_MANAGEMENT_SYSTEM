@@ -29,7 +29,7 @@ int ex_it(int temp);//exit function declaration
 int vac_add(int read);
 int vac_edit(int read,char temp[]);
 int vac_view(int read,char temp[]);
-short gotoxy(short x, short y);//Defines gotoxy() for ANSI C compilers.
+
 //sets co-ordinates in (x,y).
 struct patient//list of global variable
 {

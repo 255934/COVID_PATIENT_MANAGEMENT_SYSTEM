@@ -1,7 +1,7 @@
 //HEADER FILES
 #include<stdio.h>//Use for standard I/O Operation
 
-#include<conio.h>//Use for delay(),getch(),gotoxy(),etc.
+
 #include<ctype.h>//se for toupper(), tolower(),etc
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
@@ -15,7 +15,7 @@ int vac_view(int read, char temp[])
 	FILE *ek;
 	ek=fopen("Record3.dat","r");
 	printf("\n\n\t\t\t!!!!!!!!!!!!!! Search Patients Record !!!!!!!!!!!!!\n");
-	gotoxy(12,8);
+
 	printf("\n Enter Patient Name to be viewed:");
 	if(read==0)
 	{
@@ -29,38 +29,21 @@ int vac_view(int read, char temp[])
 	{
 		if(strcmp(p.First_Name,name)==0)
 		{
-			gotoxy(1,15);
-			printf("Full Name");
-			gotoxy(25,15);
-			printf("Gender");
-			gotoxy(32,15);
-			printf("Age");
-			gotoxy(37,15);
-			printf("Address");
-			gotoxy(52,15);
-			printf("Contact No.");
-			gotoxy(64,15);
-			printf("Email");
-			gotoxy(80,15);
-			printf("Problem");
-			gotoxy(95,15);
-			printf("Prescribed Doctor\n");
-			printf("=================================================================================================================");
-			gotoxy(1,18);
+			
 			printf("%s %s",p.First_Name, p.Last_Name);
-			gotoxy(25,18);
+			
 			printf("%c",p.Gender);
-			gotoxy(32,18);
+			
 			printf("%i",p.age);
-			gotoxy(37,18);
+		
 			printf("%s",p.Address);
-			gotoxy(52,18);
+			
 			printf("%s",p.Contact_no);
-			gotoxy(64,18);
+			
 			printf("%s",p.Email);
-			gotoxy(80,18);
+		
 			printf("%s",p.Problem);
-			gotoxy(95,18);
+		
 			printf("%s",p.Doctor);
 			printf("\n");
 			break;
@@ -68,7 +51,7 @@ int vac_view(int read, char temp[])
 	   }
 	   if(strcmp(p.First_Name,name)!=0)
 	   {
-		gotoxy(5,10);
+		
 		printf("Record not found!");
 	
         return 0;
