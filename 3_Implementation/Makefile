@@ -3,9 +3,9 @@ TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
 
-SRC = src/Addrec.c src/Dlt_rec.c src/Edit_rec.c src/ex_it.c src/func_list.c src/gotoxy.c src/LoginScreen.c src/MainMenu.c project_main.c src/Search_rec.c src/Title.c src/WelcomeScreen.c src/vac_add.c src/vac_edit.c src/vac_view.c
+SRC = src/Addrec.c src/Dlt_rec.c src/Edit_rec.c src/ex_it.c src/func_list.c  src/LoginScreen.c src/MainMenu.c project_main.c src/Search_rec.c src/Title.c src/WelcomeScreen.c src/vac_add.c src/vac_edit.c src/vac_view.c
 
-TEST_SRC =  src/Addrec.c src/Dlt_rec.c src/Edit_rec.c src/ex_it.c src/func_list.c src/gotoxy.c src/LoginScreen.c src/MainMenu.c src/Search_rec.c src/Title.c src/WelcomeScreen.c src/vac_add.c src/vac_edit.c src/vac_view.c test/testt.c unity/unity.c
+TEST_SRC =  src/Addrec.c src/Dlt_rec.c src/Edit_rec.c src/ex_it.c src/func_list.c  src/LoginScreen.c src/MainMenu.c src/Search_rec.c src/Title.c src/WelcomeScreen.c src/vac_add.c src/vac_edit.c src/vac_view.c test/testt.c unity/unity.c
 
 INC = -I inc -I unity
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
