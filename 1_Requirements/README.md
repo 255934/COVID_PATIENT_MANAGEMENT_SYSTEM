@@ -7,9 +7,7 @@ The project is a small component of a large system, this can be integrated with 
 ## Cost and Features
 | Time | Software |Feature| Cost | 
 | ----- | ----- | ------- | ---------|
-| 2011 | Optum| Optum is designed to help health organizations manage their clinical and administrative tasks. With features like scheduling, prescribing, billing and more, it streamlines workflows, provides medical information online, enables greater care and increases overall revenue.
-
-It allows healthcare professionals to spend more time focusing on and communicating with patients and less time dealing with time-consuming tasks | Based on customer client base| 
+| 2011 | Optum| Optum is designed to help health organizations manage their clinical and administrative tasks. With features like scheduling, prescribing, billing and more, it streamlines workflows, provides medical information online, enables greater care and increases overall revenue.It allows healthcare professionals to spend more time focusing on and communicating with patients and less time dealing with time-consuming tasks | Based on customer client base| 
 
 
 
