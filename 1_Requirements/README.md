@@ -5,6 +5,13 @@
 ## Research
 The project is a small component of a large system, this can be integrated with insurance system so that insurance can be marketed to a target audience. 
 ## Cost and Features
+| Time | Software |Feature| Cost | 
+| ----- | ----- | ------- | ---------|
+| 2011 | Optum| Optum is designed to help health organizations manage their clinical and administrative tasks. With features like scheduling, prescribing, billing and more, it streamlines workflows, provides medical information online, enables greater care and increases overall revenue.
+
+It allows healthcare professionals to spend more time focusing on and communicating with patients and less time dealing with time-consuming tasks | Based on customer client base| 
+
+
 
 ## Defining Our System
    ![Our System](https://github.com/255934/COVID_PATIENT_MANAGEMENT_SYSTEM/blob/main/6_ImagesAndVideos/temp_system_diagram.png)
