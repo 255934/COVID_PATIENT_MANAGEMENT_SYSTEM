@@ -6,14 +6,20 @@
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
 #include "covid_management.h"
-
-int Search_rec(int read, char temp[])
+/**
+ * @brief used to search records for the database
+ * 
+ * @param read  determines if the function is being useds to test or not
+ * @param temp  passing string for testing
+ * @return int 
+ */
+int Search(int read, char temp[])
 {
 	char name[20];
-	system("cls");
+	
 	Title();// call Title function
-	FILE *ek;
-	ek=fopen("Record2.dat","r");
+	FILE *ptr;
+	ptr=fopen("Record2.dat","r");
 	printf("\n\n\t\t\t!!!!!!!!!!!!!! Search Patients Record !!!!!!!!!!!!!\n");
 	
 	printf("\n Enter Patient Name to be viewed:");
@@ -25,7 +31,7 @@ int Search_rec(int read, char temp[])
 	}
 	fflush(stdin);
 	name[0]=toupper(name[0]);
-	while(fscanf(ek,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, &p.Gender, &p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor)!=EOF)
+	while(fscanf(ptr,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, &p.Gender, &p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor)!=EOF)
 	{
 		if(strcmp(p.First_Name,name)==0)
 		{
@@ -55,6 +61,6 @@ int Search_rec(int read, char temp[])
 		printf("Record not found!");
 		return 0;
 	   }
-	fclose(ek);
+	fclose(ptr);
 	return 1;
 }

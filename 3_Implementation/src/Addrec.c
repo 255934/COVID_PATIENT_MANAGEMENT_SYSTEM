@@ -6,20 +6,29 @@
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
 #include "covid_management.h"
-int Add_rec(int read)
+int bad=0;
+int v=0;
+int tt=0;
+/**
+ * @brief adds the details of patient
+ * 
+ * @param read  value determines if test is performed or not
+ * @return int 
+ */
+int Add(int read)
 {
-	system("cls");
+	
 	Title();// call Title function
 	//list of variables
-	char ans;
+	char anwer;
 
-	FILE*ek;//file pointer
-	ek=fopen("Record2.dat","a");//open file in write mode
-	printf("\n\n\t\t\t!!!!!!!!!!!!!! Add Patients Record !!!!!!!!!!!!!\n");
+	FILE*ptr;//file pointer
+	ptr=fopen("Record2.dat","a");//open file in write mode
+	printf("\t\t\t\t\t\t\t********** Add Patients Record*********\n");
 	
-	/* **************************First Name*********************************** */
 
-	printf("\n\t\t\tFirst Name: ");
+
+	printf("\t\t\tFirst Name: ");
 	if(read==0)
 	{
 	scanf("%s",p.First_Name);
@@ -32,26 +41,26 @@ int Add_rec(int read)
 	}
 	else
 	{
-		for (b=0;b<strlen(p.First_Name);b++)
+		for (bad=0;bad<strlen(p.First_Name);bad++)
 		{
-			if (isalpha(p.First_Name[b]))
+			if (isalpha(p.First_Name[bad]))
 			{
-				valid=1;
+				v=1;
 			}
 			else
 			{
-				valid=0;
+				v=0;
 				break;
 			}
 		}
-		if(!valid)
+		if(!v)
 		{
-			printf("\n\t\t First name contain Invalid character :(  Enter again :)");
+			printf("\n\t\t\tInvalid character \n");
 			return 2;
 		}
 	}
 	
-	/* ********************************************** Last name ************************************************ */
+	
 
 	printf("\n\t\t\tLast Name: ");
 	if(read==0)
@@ -61,32 +70,30 @@ int Add_rec(int read)
     p.Last_Name[0]=toupper(p.Last_Name[0]);
     if(strlen(p.Last_Name)>20||strlen(p.Last_Name)<2)
 	{
-		printf("\n\t Invalid :( \t The max range for last name is 20 and min range is 2 :)");
+		printf("\n\t\t\t Invalid");
 		return 3;
 	}
 	else
 	{
-		for (b=0;b<strlen(p.Last_Name);b++)
+		for (bad=0;bad<strlen(p.Last_Name);bad++)
 		{
-			if (isalpha(p.Last_Name[b]))
+			if (isalpha(p.Last_Name[bad]))
 			{
-				valid=1;
+				v=1;
 			}
 			else
 			{
-				valid=0;
+				v=0;
 				break;
 			}
 		}
-		if(!valid)
+		if(!v)
 		{
 			printf("\n\t\t Last name contain Invalid character :(  Enter again :)");
 			return 4;
 		}
 	}
-/* ******************************************* Gender ************************************************************** */	    
-	do
-	{
+
 	    printf("\n\t\t\tGender[F/M]: ");
 		if(read==0)
 		{
@@ -94,27 +101,26 @@ int Add_rec(int read)
 		}
 		if(toupper(p.Gender)=='M'|| toupper(p.Gender)=='F')
 		{
-			ok =1;
+			tt =1;
 		}
 		else 
 		{
-		ok =0;
+		tt =0;
 		}
-        if(!ok)
+        if(!tt)
 	    {
 	    	printf("\n\t\t Gender contain Invalid character :(  Enter either F or M :)");
 			return 5;
     	}
-	 }	while(!ok);
-/* ***************************************** Age ********************************************************************** */	
+	 
+	
     printf("\n\t\t\tAge:");
 	if(read==0)
 	{
     scanf(" %i",&p.age);
 	}
-/* **************************************** Address ******************************************************************* */    
-    do
-    {
+
+    
     
     printf("\n\t\t\tAddress: ");
 	if(read==0)
@@ -128,10 +134,8 @@ int Add_rec(int read)
 		return 6;
 	}
 	
-}while(!valid);
-/* ******************************************* Contact no. ***************************************** */
-do
-{
+
+
 	
     printf("\n\t\t\tContact no: ");
 	if(read==0)
@@ -145,28 +149,25 @@ do
 	}
 	else
 	{
-		for (b=0;b<strlen(p.Contact_no);b++)
+		for (bad=0;bad<strlen(p.Contact_no);bad++)
 		{
-			if (!isalpha(p.Contact_no[b]))
+			if (!isalpha(p.Contact_no[bad]))
 			{
-				valid=1;
+				v=1;
 			}
 			else
 			{
-				valid=0;
+				v=0;
 				break;
 			}
 		}
-		if(!valid)
+		if(!v)
 		{
 			printf("\n\t\t Contact no. contain Invalid character :(  Enter again :)");
 			return 8;
 		}
 	}
-}while(!valid);
-/* ************************************************** Email ******************************************** */
-do
-{
+
     printf("\n\t\t\tEmail: ");
 	if(read==0)
 	{
@@ -177,8 +178,6 @@ do
        printf("\n\t Invalid :( \t The max range for email is 30 and min range is 8 :)");
 	   return 9;	
 	}
-}while(strlen(p.Email)>30||strlen(p.Email)<8);
-/* ********************************************************* Problem *********************************************** */
 
     printf("\n\t\t\tProblem: ");
 	if(read==0)
@@ -193,26 +192,25 @@ do
 	}
 	else
 	{
-		for (b=0;b<strlen(p.Problem);b++)
+		for (bad=0;bad<strlen(p.Problem);bad++)
 		{
-			if (isalpha(p.Problem[b]))
+			if (isalpha(p.Problem[bad]))
 			{
-				valid=1;
+				v=1;
 			}
 			else
 			{
-				valid=0;
+				v=0;
 				break;
 			}
 		}
-		if(!valid)
+		if(!v)
 		{
 			printf("\n\t\t Problem contain Invalid character :(  Enter again :)");
 			return 11;
 		}
 	}
-/* ********************************************** Prescribed Doctor **************************************** */	
-	
+
     printf("\n\t\t\tPrescribed Doctor:");
 	if(read==0)
 	{
@@ -226,28 +224,28 @@ do
 	}
 	else
 	{
-		for (b=0;b<strlen(p.Doctor);b++)
+		for (bad=0;bad<strlen(p.Doctor);bad++)
 		{
-			if (isalpha(p.Doctor[b]))
+			if (isalpha(p.Doctor[bad]))
 			{
-				valid=1;
+				v=1;
 			}
 			else
 			{
-				valid=0;
+				v=0;
 				break;
 			}
 		}
-		if(!valid)
+		if(!v)
 		{
 			printf("\n\t\t Doctor name contain Invalid character :(  Enter again :)");
 			return 13;
 		}
 	}
     
-    fprintf(ek," %s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, p.Gender, p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor);
+    fprintf(ptr," %s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, p.Gender, p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor);
     printf("\n\n\t\t\t.... Information Record Successful ...");
-    fclose(ek);//ek file is closed
+    fclose(ptr);//ek file is closed
 	return p.age;
     
 }

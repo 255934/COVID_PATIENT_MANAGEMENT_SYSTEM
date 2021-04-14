@@ -44,8 +44,8 @@ int main()
 
 void test_search_rec()
 {
-  TEST_ASSERT_EQUAL(1,Search_rec(1,"Milan"));
-  TEST_ASSERT_EQUAL(0,Search_rec(1,"random"));
+  TEST_ASSERT_EQUAL(1,Search(1,"Milan"));
+  TEST_ASSERT_EQUAL(0,Search(1,"random"));
 
 }
 void test_vac_search_rec()
@@ -89,53 +89,53 @@ void test_func_list()
 }
 void test_dlt()
 {
-  TEST_ASSERT_EQUAL(1, Dlt_rec(1,"Milan"));
-  TEST_ASSERT_EQUAL(0,Dlt_rec(1,"random"));
+  TEST_ASSERT_EQUAL(1, Deletes(1,"Milan"));
+  TEST_ASSERT_EQUAL(0,Deletes(1,"random"));
 }
 
 /* Write all the test functions */ 
 void test_add(void) {
   reset_struct();
-  TEST_ASSERT_EQUAL(p.age, Add_rec(1));
+  TEST_ASSERT_EQUAL(p.age, Add(1));
   strcpy(p.First_Name,"M");
-  TEST_ASSERT_EQUAL(1, Add_rec(1));
+  TEST_ASSERT_EQUAL(1, Add(1));
   strcpy(p.First_Name,"MMMMMMMMMMMMMMMMMMMMMMMMMMM");
-  TEST_ASSERT_EQUAL(1, Add_rec(1));
+  TEST_ASSERT_EQUAL(1, Add(1));
   strcpy(p.First_Name,"M2M");
-  TEST_ASSERT_EQUAL(2, Add_rec(1));
+  TEST_ASSERT_EQUAL(2, Add(1));
   reset_struct();
   strcpy(p.Last_Name,"M");
-  TEST_ASSERT_EQUAL(3, Add_rec(1));
+  TEST_ASSERT_EQUAL(3, Add(1));
   strcpy(p.Last_Name,"MMMMMMMMMMMMMMMMMMMMMMMMMMM");
-  TEST_ASSERT_EQUAL(3, Add_rec(1));
+  TEST_ASSERT_EQUAL(3, Add(1));
   strcpy(p.Last_Name,"M2M");
-  TEST_ASSERT_EQUAL(4, Add_rec(1));
+  TEST_ASSERT_EQUAL(4, Add(1));
   reset_struct();
   p.Gender='H';
-  TEST_ASSERT_EQUAL(5, Add_rec(1));
+  TEST_ASSERT_EQUAL(5, Add(1));
   reset_struct();
   strcpy(p.Address,"Mu");
-  TEST_ASSERT_EQUAL(6, Add_rec(1));
+  TEST_ASSERT_EQUAL(6, Add(1));
   strcpy(p.Address,"Mummmmmmmmmmmmmmmmmmm");
-  TEST_ASSERT_EQUAL(6, Add_rec(1));
+  TEST_ASSERT_EQUAL(6, Add(1));
   reset_struct();
   strcpy(p.Contact_no,"90040873");
-  TEST_ASSERT_EQUAL(7, Add_rec(1));
+  TEST_ASSERT_EQUAL(7, Add(1));
   strcpy(p.Contact_no,"90040zz873");
-  TEST_ASSERT_EQUAL(8, Add_rec(1));
+  TEST_ASSERT_EQUAL(8, Add(1));
   reset_struct();
   strcpy(p.Email,"milan.");
-  TEST_ASSERT_EQUAL(9, Add_rec(1));
+  TEST_ASSERT_EQUAL(9, Add(1));
   reset_struct();
   strcpy(p.Problem,"mm");
-  TEST_ASSERT_EQUAL(10, Add_rec(1));
+  TEST_ASSERT_EQUAL(10, Add(1));
   strcpy(p.Problem,"m**m");
-  TEST_ASSERT_EQUAL(11, Add_rec(1));
+  TEST_ASSERT_EQUAL(11, Add(1));
   reset_struct();
   strcpy(p.Doctor,"LL");
-  TEST_ASSERT_EQUAL(12, Add_rec(1));
+  TEST_ASSERT_EQUAL(12, Add(1));
    strcpy(p.Doctor,"L***L");
-  TEST_ASSERT_EQUAL(13, Add_rec(1));
+  TEST_ASSERT_EQUAL(13, Add(1));
   
 }
 void test_vac_add(void) {

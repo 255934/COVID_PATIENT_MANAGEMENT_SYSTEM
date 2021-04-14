@@ -5,18 +5,25 @@
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
 #include "covid_management.h"
-int Edit_rec(int read, char temp[])
+/**
+ * @brief used to edit records for the database
+ * 
+ * @param read  determines if the function is being useds to test or not
+ * @param temp  passing string for testing
+ * @return int 
+ */
+int Edit(int read, char temp[])
 {
-	FILE *ek, *ft;
+	FILE *ptr, *ptr1;
   int i,b, valid=0;
   char ch;
   char name[20];
 
-  system("cls");
+ 
   	Title();// call Title window
- 		ft=fopen("temp2.dat","w+");
-	   ek=fopen("Record2.dat","r");
-	   if(ek==NULL)
+ 		ptr1=fopen("temp2.dat","w+");
+	   ptr=fopen("Record2.dat","r");
+	   if(ptr==NULL)
 	   {
 		printf("\n\t Can not open file!! ");
 	
@@ -39,13 +46,13 @@ int Edit_rec(int read, char temp[])
 	   	
 		
 		
-		if(ft==NULL)
+		if(ptr1==NULL)
 		{
 			printf("\n Can not open file");
 			
 			return 0;
 		}
-		while(fscanf(ek,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, &p.Gender, &p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor)!=EOF)
+		while(fscanf(ptr,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, &p.Gender, &p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor)!=EOF)
 		{
 			if(strcmp(p.First_Name, name)==0)
 			{
@@ -90,18 +97,18 @@ int Edit_rec(int read, char temp[])
 				
 				if(ch=='u' || ch=='U')
 				{
-				fprintf(ft,"%s %s %c %i %s %s %s %s %s\n",p.First_Name,p.Last_Name,p.Gender, p.age,p.Address,p.Contact_no,p.Email,p.Problem,p.Doctor);
+				fprintf(ptr1,"%s %s %c %i %s %s %s %s %s\n",p.First_Name,p.Last_Name,p.Gender, p.age,p.Address,p.Contact_no,p.Email,p.Problem,p.Doctor);
 				printf("\n\n\t\t\tPatient record updated successfully...");
 				}					
 			}
 			else
 			{
-			fprintf(ft,"%s %s %c %i %s %s %s %s %s\n",p.First_Name,p.Last_Name,p.Gender, p.age,p.Address,p.Contact_no,p.Email,p.Problem,p.Doctor);	
+			fprintf(ptr1,"%s %s %c %i %s %s %s %s %s\n",p.First_Name,p.Last_Name,p.Gender, p.age,p.Address,p.Contact_no,p.Email,p.Problem,p.Doctor);	
 			}
 		 }
 		 if(!valid) printf("\n\t\tNO RECORD FOUND...");
-	   fclose(ft);
-	   fclose(ek);
+	   fclose(ptr1);
+	   fclose(ptr);
 	   remove("Record2.dat");
    	   rename("temp2.dat","Record2.dat");
 	

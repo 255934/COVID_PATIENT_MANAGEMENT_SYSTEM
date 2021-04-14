@@ -6,17 +6,23 @@
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
 #include "covid_management.h"
+/**
+ * @brief prints all the values in database
+ * 
+ * @param useless  has no functionality other than testing
+ * @return int 
+ */
 int func_list(int useless)
 {
 	int row;
-	system("cls");
+	
 	Title();
-	FILE *ek;
-	ek=fopen("Record2.dat","r");
+	FILE *ptr;
+	ptr=fopen("Record2.dat","r");
 	printf("\n\n\t\t\t!!!!!!!!!!!!!! List Patients Record !!!!!!!!!!!!!\n");
 
 		row=17;
-		while(fscanf(ek,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, 
+		while(fscanf(ptr,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, 
 					&p.Gender, &p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor)!=EOF)
 		{
 		
@@ -38,7 +44,9 @@ int func_list(int useless)
 			
 			row++;
 		}
-		fclose(ek);
+		fclose(ptr);
+		
+		
 	
 		return 1;
 }

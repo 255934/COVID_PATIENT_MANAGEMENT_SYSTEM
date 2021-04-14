@@ -6,14 +6,18 @@
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
 #include "covid_management.h"
+/**
+ * @brief provides the login screen and other options
+ * 
+ */
 void LoginScreen(void)//function for login screen
 {
 //list of variables	
 int e=0	;
 char Username[15];
 char Password[15];
-char original_Username[25]="admin";
-char original_Password[15]="admin";
+char o_U[10]="admin";
+char o_P[10]="admin";
 
 do
 {
@@ -24,7 +28,7 @@ do
 	printf("\n\n\t\t\t\t\tPASSWORD:");
 	scanf("%s",&Password);
 	
-	if (strcmp(Username,original_Username)==0 && strcmp(Password,original_Password)==0)
+	if (strcmp(Username,o_U)==0 && strcmp(Password,o_P)==0)
 	{
 		printf("\n\n\n\t\t\t\t\t...Login Successfull...");
 		
@@ -49,5 +53,5 @@ while(e<=2);
     ex_it(0);
 	}
  
-system("cls");
+
 }

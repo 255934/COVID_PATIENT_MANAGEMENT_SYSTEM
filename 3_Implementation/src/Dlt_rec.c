@@ -5,16 +5,22 @@
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
 #include "covid_management.h"
-
-int Dlt_rec(int read, char temp[])
+/**
+ * @brief used to delete records for the database
+ * 
+ * @param read  determines if the function is being useds to test or not
+ * @param temp  passing string for testing
+ * @return int 
+ */
+int Deletes(int read, char temp[])
 {
 	char name[20];
 	int found=0;
-	system("cls");
+	
 	Title();// call Title function
-	FILE *ek, *ft;
-	ft=fopen("temp_file2.dat","w+");
-	ek=fopen("Record2.dat","r");
+	FILE *ptr, *ptr1;
+	ptr1=fopen("temp_file2.dat","w+");
+	ptr=fopen("Record2.dat","r");
 	printf("\n\n\t\t\t!!!!!!!!!!!!!! Delete Patients Record !!!!!!!!!!!!!\n");
 
 	printf("\n Enter Patient Name to delete: ");
@@ -30,11 +36,11 @@ int Dlt_rec(int read, char temp[])
 	}
 	
 	
-	while (fscanf(ek,"%s %s %c %i %s %s %s %s %s", p.First_Name, p.Last_Name, &p.Gender,
+	while (fscanf(ptr,"%s %s %c %i %s %s %s %s %s", p.First_Name, p.Last_Name, &p.Gender,
 			 &p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor)!=EOF)
 	{
 		if (strcmp(p.First_Name,name)!=0)
-		fprintf(ft,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, p.Gender, p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor);
+		fprintf(ptr1,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, p.Gender, p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor);
 		else 
 		{
 			printf("%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, p.Gender, p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor);
@@ -50,8 +56,8 @@ int Dlt_rec(int read, char temp[])
 	}
 	else
 	{
-		fclose(ek);
-		fclose(ft);
+		fclose(ptr);
+		fclose(ptr1);
 		remove("Record2.dat");
 		rename("temp_file2.dat","Record2.dat");
 		printf("\n\n\t\t\t Record deleted successfully :) ");

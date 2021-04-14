@@ -9,12 +9,12 @@
 void WelcomeScreen(void) //function for welcome screen
 {
 	
-	printf("\n\n\n\n\n\n\n\t\t\t\t#########################################");
-	printf("\n\t\t\t\t#\t\t WELCOME TO\t\t#");
-	printf("\n\t\t\t\t#  HOSPITAL MANAGEMENT SYSTEM    #");
-	printf("\n\t\t\t\t#########################################");
-	printf("\n\n\n\n\n Press any key to continue......\n");
+	printf("\n\n\n\t\t\t\t******************************************");
+	
+	printf("\n\t\t\t\t*  COVID PATIENT MANAGEMENT SYSTEM    *");
+	printf("\n\t\t\t\t******************************************");
+	
 
-	system("cls");//Use to clear screen
+	
 	
 }

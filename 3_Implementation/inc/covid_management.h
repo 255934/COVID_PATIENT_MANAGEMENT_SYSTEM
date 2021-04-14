@@ -11,20 +11,20 @@
 #ifndef __HOSPITAL__
 #define __HOSPITAL__
 
-extern char ans; 
-extern int ok;
-extern int b, valid;
+extern char anwer; 
+extern int tt;
+extern int bad, v;
 
 //FUNCTION DECLERATION
 void WelcomeScreen(void);//WelcomeScreen function decleration
 void Title(void);//Title function decleration
 int MainMenu(int read);//MainMenu function decleration
 void LoginScreen(void);//LoginScreen function decleration
-int Add_rec(int read);//Add_rec function declaration
+int Add(int read);//Add_rec function declaration
 int func_list(int temp);//function to list the patient details 
-int Search_rec(int read,char temp[]);//Search_rec function declaration
-int Edit_rec(int read,char temp[]);//Edit_rec function declaration
-int Dlt_rec(int read,char temp[]);//Dlt_rec function declaration
+int Search(int read,char temp[]);//Search_rec function declaration
+int Edit(int read,char temp[]);//Edit_rec function declaration
+int Deletes(int read,char temp[]);//Dlt_rec function declaration
 int ex_it(int temp);//exit function declaration
 int vac_add(int read);
 int vac_edit(int read,char temp[]);
