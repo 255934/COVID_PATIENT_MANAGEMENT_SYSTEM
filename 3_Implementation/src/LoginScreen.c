@@ -33,10 +33,10 @@ do
 {
 	printf("\n\n\n\n\t\t\t\tEnter your Username and Password :)");
 	printf("\n\n\n\t\t\t\t\tUSERNAME:");
-	scanf("%s",&Username);
+	scanf("%s",Username);
 	
 	printf("\n\n\t\t\t\t\tPASSWORD:");
-	scanf("%s",&Password);
+	scanf("%s",Password);
 	
 	if (strcmp(Username,o_U)==0 && strcmp(Password,o_P)==0)
 	{
