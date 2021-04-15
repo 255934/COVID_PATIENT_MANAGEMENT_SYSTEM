@@ -44,6 +44,7 @@ int vac_add(int read)
 	if(strlen(p1.First_Name)>20||strlen(p1.First_Name)<2)
 	{
 		printf("\n\t Invalid :( \t The max range for first name is 20 and min range is 2 :)");
+		 fclose(ptr);
 		return 1;
 	}
 	else
@@ -63,6 +64,7 @@ int vac_add(int read)
 		if(!v)
 		{
 			printf("\n\t\t First name contain Invalid character :(  Enter again :)");
+			 fclose(ptr);
 			return 2;
 		}
 	}
@@ -78,6 +80,7 @@ int vac_add(int read)
     if(strlen(p1.Last_Name)>20||strlen(p1.Last_Name)<2)
 	{
 		printf("\n\t Invalid :( \t The max range for last name is 20 and min range is 2 :)");
+	     fclose(ptr);
 		return 3;
 	}
 	else
@@ -97,6 +100,7 @@ int vac_add(int read)
 		if(!v)
 		{
 			printf("\n\t\t Last name contain Invalid character :(  Enter again :)");
+			 fclose(ptr);
 			return 4;
 		}
 	}
@@ -118,6 +122,7 @@ int vac_add(int read)
         if(!tt)
 	    {
 	    	printf("\n\t\t Gender contain Invalid character :(  Enter either F or M :)");
+		 fclose(ptr);
 			return 5;
     	}
 	
@@ -138,6 +143,7 @@ int vac_add(int read)
     if(strlen(p1.Address)>20||strlen(p1.Address)<4)
 	{
 		printf("\n\t Invalid :( \t The max range for address is 20 and min range is 4 :)");
+	     fclose(ptr);
 		return 6;
 	}
 	
@@ -152,6 +158,7 @@ int vac_add(int read)
     if(strlen(p1.Contact_no)>10||strlen(p1.Contact_no)!=10)
 	{
 		printf("\n\t Sorry :( Invalid. Contact no. must contain 10 numbers. Enter again :)");
+	     fclose(ptr);
 		return 7;
 	}
 	else
@@ -171,6 +178,7 @@ int vac_add(int read)
 		if(!v)
 		{
 			printf("\n\t\t Contact no. contain Invalid character :(  Enter again :)");
+			 fclose(ptr);
 			return 8;
 		}
 	}
@@ -185,6 +193,7 @@ int vac_add(int read)
     if (strlen(p1.Email)>30||strlen(p1.Email)<8)
     {
        printf("\n\t Invalid :( \t The max range for email is 30 and min range is 8 :)");
+	     fclose(ptr);
 	   return 9;	
 	}
 
@@ -199,6 +208,7 @@ int vac_add(int read)
     if(strlen(p1.Center_name)>15||strlen(p1.Center_name)<3)
 	{
 		printf("\n\t Invalid :( \t The max range for first name is 15 and min range is 3 :)");
+	     fclose(ptr);
 		return 10;
 	}
 	else
@@ -218,6 +228,7 @@ int vac_add(int read)
 		if(!v)
 		{
 			printf("\n\t\t Problem contain Invalid character :(  Enter again :)");
+			 fclose(ptr);
 			return 11;
 		}
 	}
