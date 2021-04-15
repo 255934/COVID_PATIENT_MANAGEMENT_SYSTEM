@@ -47,6 +47,7 @@ int Add(int read)
 	if(strlen(p.First_Name)>20||strlen(p.First_Name)<2)
 	{
 		printf("\n\t Invalid :( \t The max range for first name is 20 and min range is 2 :)");
+		fclose(ptr);
 		return 1;
 	}
 	else
@@ -66,6 +67,7 @@ int Add(int read)
 		if(!v)
 		{
 			printf("\n\t\t\tInvalid character \n");
+			fclose(ptr);
 			return 2;
 		}
 	}
@@ -81,6 +83,7 @@ int Add(int read)
     if(strlen(p.Last_Name)>20||strlen(p.Last_Name)<2)
 	{
 		printf("\n\t\t\t Invalid");
+	    	fclose(ptr);
 		return 3;
 	}
 	else
@@ -100,6 +103,7 @@ int Add(int read)
 		if(!v)
 		{
 			printf("\n\t\t Last name contain Invalid character :(  Enter again :)");
+			fclose(ptr);
 			return 4;
 		}
 	}
@@ -120,6 +124,7 @@ int Add(int read)
         if(!tt)
 	    {
 	    	printf("\n\t\t Gender contain Invalid character :(  Enter either F or M :)");
+			fclose(ptr);
 			return 5;
     	}
 	 
@@ -141,6 +146,7 @@ int Add(int read)
     if(strlen(p.Address)>20||strlen(p.Address)<4)
 	{
 		printf("\n\t Invalid :( \t The max range for address is 20 and min range is 4 :)");
+	    fclose(ptr);
 		return 6;
 	}
 	
@@ -155,6 +161,7 @@ int Add(int read)
     if(strlen(p.Contact_no)>10||strlen(p.Contact_no)!=10)
 	{
 		printf("\n\t Sorry :( Invalid. Contact no. must contain 10 numbers. Enter again :)");
+	    fclose(ptr);
 		return 7;
 	}
 	else
@@ -174,6 +181,7 @@ int Add(int read)
 		if(!v)
 		{
 			printf("\n\t\t Contact no. contain Invalid character :(  Enter again :)");
+			fclose(ptr);
 			return 8;
 		}
 	}
@@ -186,6 +194,7 @@ int Add(int read)
     if (strlen(p.Email)>30||strlen(p.Email)<8)
     {
        printf("\n\t Invalid :( \t The max range for email is 30 and min range is 8 :)");
+	    fclose(ptr);
 	   return 9;	
 	}
 
@@ -198,6 +207,7 @@ int Add(int read)
     if(strlen(p.Problem)>15||strlen(p.Problem)<3)
 	{
 		printf("\n\t Invalid :( \t The max range for first name is 15 and min range is 3 :)");
+	    fclose(ptr);
 		return 10;
 	}
 	else
@@ -217,6 +227,7 @@ int Add(int read)
 		if(!v)
 		{
 			printf("\n\t\t Problem contain Invalid character :(  Enter again :)");
+			fclose(ptr);
 			return 11;
 		}
 	}
@@ -230,6 +241,7 @@ int Add(int read)
     if(strlen(p.Doctor)>30||strlen(p.Doctor)<3)
 	{
 		printf("\n\t Invalid :( \t The max range for first name is 30 and min range is 3 :)");
+	    fclose(ptr);
 		return 12;
 	}
 	else
@@ -249,6 +261,7 @@ int Add(int read)
 		if(!v)
 		{
 			printf("\n\t\t Doctor name contain Invalid character :(  Enter again :)");
+			fclose(ptr);
 			return 13;
 		}
 	}
