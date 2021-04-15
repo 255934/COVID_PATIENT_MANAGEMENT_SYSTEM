@@ -1,3 +1,13 @@
+/**
+ * @file vac_edit.c
+ * @author your name (you@domain.com)
+ * @brief used to edit the record in database for vacination
+ * @version 0.1
+ * @date 2021-04-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 //HEADER FILES
 #include<stdio.h>//Use for standard I/O Operation
 
@@ -52,57 +62,55 @@ int vac_edit(int read, char temp[])
 		
 			return 0;
 		}
-		while(fscanf(ptr,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, &p.Gender, &p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor)!=EOF)
+		while(fscanf(ptr,"%s %s %c %i %s %s %s %s %s\n", p1.First_Name, p1.Last_Name, &p1.Gender, &p1.age, p1.Address, p1.Contact_no, p1.Email, p1.Center_name, p1.Date)!=EOF)
 		{
-			if(strcmp(p.First_Name, name)==0)
+			if(strcmp(p1.First_Name, name)==0)
 			{
 				valid=1;
 				
 				printf("*** Existing Record ***");
 				
-				printf("%s \t%s \t%c \t%i \t%s \t%s \t%s \t%s \t%s\n",p.First_Name,p.Last_Name,p.Gender, p.age,p.Address,p.Contact_no,p.Email,p.Problem,p.Doctor);
+				printf("%s \t%s \t%c \t%i \t%s \t%s \t%s \t%s \t%s\n",p1.First_Name,p1.Last_Name,p1.Gender, p1.age,p1.Address,p1.Contact_no,p1.Email,p1.Center_name,p1.Date);
 				
 				printf("Enter New First Name: ");
-				scanf("%s",p.First_Name);    
+				scanf("%s",p1.First_Name);    
 				
 				printf("Enter Last Name: ");
-				scanf("%s",p.Last_Name);
+				scanf("%s",p1.Last_Name);
 				printf("Enter Gender: ");
-				scanf(" %c",&p.Gender);
-				p.Gender=toupper(p.Gender);
+				scanf(" %c",&p1.Gender);
+				p.Gender=toupper(p1.Gender);
 				
 				printf("Enter age: ");
-				scanf(" %i",&p.age);
+				scanf(" %i",&p1.age);
 				
 				printf("Enter Address: ");
-				scanf("%s",p.Address);
-				p.Address[0]=toupper(p.Address[0]);
+				scanf("%s",p1.Address);
+				p.Address[0]=toupper(p1.Address[0]);
 			
 				printf("Enter Contact no: ");
-				scanf("%s",p.Contact_no);
+				scanf("%s",p1.Contact_no);
 				
 				printf("Enter New email: ");
-				scanf("%s",p.Email);
+				scanf("%s",p1.Email);
 			 
 				printf("Enter Problem: ");
-				scanf("%s",p.Problem);
-				p.Problem[0]=toupper(p.Problem[0]);
+				scanf("%s",p1.Center_name);
+				p1.Center_name[0]=toupper(p1.Center_name[0]);
 			  
 				printf("Enter Doctor: ");
-			    scanf("%s",p.Doctor);
-			    p.Doctor[0]=toupper(p.Doctor[0]);
-			    printf("\nPress U charecter for the Updating operation : ");
-				scanf("%c",&ch);
+			    scanf("%s",p1.Date);
+			   
+			 
 			
-				if(ch=='u' || ch=='U')
-				{
-				fprintf(ptr1,"%s %s %c %i %s %s %s %s %s\n",p.First_Name,p.Last_Name,p.Gender, p.age,p.Address,p.Contact_no,p.Email,p.Problem,p.Doctor);
-				printf("\n\n\t\t\tPatient record updated successfully...");
-				}					
+				
+				fprintf(ptr1,"%s %s %c %i %s %s %s %s %s\n",p1.First_Name,p1.Last_Name,p1.Gender, p1.age,p1.Address,p1.Contact_no,p1.Email,p1.Center_name,p1.Date);
+				printf("\n\n\t\t\tVaccine record record updated successfully...");
+		
 			}
 			else
 			{
-			fprintf(ptr1,"%s %s %c %i %s %s %s %s %s\n",p.First_Name,p.Last_Name,p.Gender, p.age,p.Address,p.Contact_no,p.Email,p.Problem,p.Doctor);	
+			fprintf(ptr1,"%s %s %c %i %s %s %s %s %s\n",p1.First_Name,p1.Last_Name,p1.Gender, p1.age,p1.Address,p1.Contact_no,p1.Email,p1.Center_name,p1.Date);	
 			}
 		 }
 		 if(!valid) printf("\n\t\tNO RECORD FOUND...");

@@ -1,3 +1,13 @@
+/**
+ * @file vac_view.c
+ * @author your name (you@domain.com)
+ * @brief used to veiw the people who registered for the vaccine
+ * @version 0.1
+ * @date 2021-04-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 //HEADER FILES
 #include<stdio.h>//Use for standard I/O Operation
 
@@ -31,31 +41,31 @@ int vac_view(int read, char temp[])
 	}
 	fflush(stdin);
 	name[0]=toupper(name[0]);
-	while(fscanf(ptr,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, &p.Gender, &p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor)!=EOF)
+	while(fscanf(ptr,"%s %s %c %i %s %s %s %s %s\n", p1.First_Name, p1.Last_Name, &p1.Gender, &p1.age, p1.Address, p1.Contact_no, p1.Email, p1.Center_name, p1.Date)!=EOF)
 	{
-		if(strcmp(p.First_Name,name)==0)
+		if(strcmp(p1.First_Name,name)==0)
 		{
 			
-			printf("%s %s",p.First_Name, p.Last_Name);
+			printf("%s %s",p1.First_Name, p1.Last_Name);
 			
-			printf("%c",p.Gender);
+			printf("%c",p1.Gender);
 			
-			printf("%i",p.age);
+			printf("%i",p1.age);
 		
-			printf("%s",p.Address);
+			printf("%s",p1.Address);
 			
-			printf("%s",p.Contact_no);
+			printf("%s",p1.Contact_no);
 			
-			printf("%s",p.Email);
+			printf("%s",p1.Email);
 		
-			printf("%s",p.Problem);
+			printf("%s",p1.Center_name);
 		
-			printf("%s",p.Doctor);
+			printf("%s",p1.Date);
 			printf("\n");
 			break;
 		}
 	   }
-	   if(strcmp(p.First_Name,name)!=0)
+	   if(strcmp(p1.First_Name,name)!=0)
 	   {
 		
 		printf("Record not found!");

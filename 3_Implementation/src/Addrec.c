@@ -1,4 +1,14 @@
 //HEADER FILES
+/**
+ * @file Addrec.c
+ * @author your name (you@domain.com)
+ * @brief  used to add record to database
+ * @version 0.1
+ * @date 2021-04-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include<stdio.h>//Use for standard I/O Operation
 
 

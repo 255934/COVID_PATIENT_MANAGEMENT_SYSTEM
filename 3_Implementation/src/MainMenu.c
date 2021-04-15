@@ -1,3 +1,13 @@
+/**
+ * @file MainMenu.c
+ * @author your name (you@domain.com)
+ * @brief  used to create the menu for the program
+ * @version 0.1
+ * @date 2021-04-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 //HEADER FILES
 #include<stdio.h>//Use for standard I/O Operation
 
@@ -39,45 +49,66 @@ int MainMenu(int read)//function decleration
 	else{
 		choose=read;
 	}
-	
+	typedef enum {
+		case1=1,
+		case2,
+		case3,
+		case4,
+		case5,
+		case6,
+		case7,
+		case8,
+		case9
+
+	} numerate;
+
+	int (*fun1) (int)=Add;
+	int (*func2) (int ,char[])=vac_view ;
+	int (*func3) (int)=ex_it;
+	int (*func4) (int)=vac_add;
+	int (*func5) (int, char[])=vac_edit;
+	int (*func6) (int)=func_list;
+	int (*func7) (int, char[])=Search;
+	int (*func8) (int,char[])=Edit;
+	int (*func9) (int,char[])=Deletes;
 	switch(choose)//switch to differeht case
 	{
 	
-	case 1:
-		Add(0);//Add_rec function is called
+	case case1:
+		fun1(0);//Add_rec function is called
 		
 	
     	return 1;
-    case 2:
-    	func_list(0);
+    case case2:
+    	func6(0);
 		
     	return 2;
-	case 3:
-		Search(0,"");//View_rec function is call
+	case case3:
+		func7(0,"");//View_rec function is call
 		
     	return 3;
-	case 4:
-		Edit(0,"");//Edit_rec function is call
+	case case4:
+		func8(0,"");//Edit_rec function is call
 		
 		return 4;
-	case 5:
-		Deletes(0,"");//Dlt_rec function is call
+	case case5:
+		func9(0,"");//Dlt_rec function is call
 		
 		return 5;
-	case 6:
-		ex_it(0);//ex_it function is call
+	case case6:
+		func3(0);//ex_it function is call
 		
     	return 6;
-	case 7:
-		vac_add(0);
+	case case7:
+		func4(0);
 	
 		return 7;
-	case 8:
-		vac_edit(0,"");
+	case case8:
+		func5(0,"");
 		
 		return 8;
-	case 9:
-		vac_view(0,"");
+	case case9:
+		func2(0,"");
 		
 		return 9;
 

@@ -1,4 +1,15 @@
+/**
+ * @file Dlt_rec.c
+ * @author your name (you@domain.com)
+ * @brief used to delete record from database
+ * @version 0.1
+ * @date 2021-04-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 //HEADER FILES
+
 #include<stdio.h>//Use for standard I/O Operation
 
 #include<ctype.h>//se for toupper(), tolower(),etc

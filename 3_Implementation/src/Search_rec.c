@@ -1,3 +1,13 @@
+/**
+ * @file Search_rec.c
+ * @author your name (you@domain.com)
+ * @brief searching records in the database using name
+ * @version 0.1
+ * @date 2021-04-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 //HEADER FILES
 #include<stdio.h>//Use for standard I/O Operation
 

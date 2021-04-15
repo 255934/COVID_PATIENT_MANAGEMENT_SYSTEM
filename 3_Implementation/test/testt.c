@@ -79,6 +79,19 @@ void reset_struct()
   strcpy(p.Problem,"XStrain");
 
 }
+void reset_struct1()
+{
+   p1.age=12;
+  strcpy(p1.First_Name,"Milan");
+  strcpy(p1.Address,"Mumbai");
+  strcpy(p1.Contact_no,"9004088473");
+  strcpy(p1.Date,"12-04-2020");
+  strcpy(p1.Email,"milan.apegankar12@gmai.com");
+  p1.Gender='M';
+  strcpy(p1.Last_Name,"Apegankar");
+  strcpy(p1.Center_name,"Vashi");
+
+}
 void test_exit()
 {
    TEST_ASSERT_EQUAL(1, ex_it(0));
@@ -139,47 +152,44 @@ void test_add(void) {
   
 }
 void test_vac_add(void) {
-  reset_struct();
-  TEST_ASSERT_EQUAL(p.age, vac_add(1));
-  strcpy(p.First_Name,"M");
+  reset_struct1();
+  TEST_ASSERT_EQUAL(p1.age, vac_add(1));
+  strcpy(p1.First_Name,"M");
   TEST_ASSERT_EQUAL(1, vac_add(1));
-  strcpy(p.First_Name,"MMMMMMMMMMMMMMMMMMMMMMMMMMM");
+  strcpy(p1.First_Name,"MMMMMMMMMMMMMMMMMMMMMMMMMMM");
   TEST_ASSERT_EQUAL(1, vac_add(1));
-  strcpy(p.First_Name,"M2M");
+  strcpy(p1.First_Name,"M2M");
   TEST_ASSERT_EQUAL(2, vac_add(1));
-  reset_struct();
-  strcpy(p.Last_Name,"M");
+  reset_struct1();
+  strcpy(p1.Last_Name,"M");
   TEST_ASSERT_EQUAL(3, vac_add(1));
-  strcpy(p.Last_Name,"MMMMMMMMMMMMMMMMMMMMMMMMMMM");
+  strcpy(p1.Last_Name,"MMMMMMMMMMMMMMMMMMMMMMMMMMM");
   TEST_ASSERT_EQUAL(3,vac_add(1));
-  strcpy(p.Last_Name,"M2M");
+  strcpy(p1.Last_Name,"M2M");
   TEST_ASSERT_EQUAL(4, vac_add(1));
-  reset_struct();
-  p.Gender='H';
+  reset_struct1();
+  p1.Gender='H';
   TEST_ASSERT_EQUAL(5, vac_add(1));
-  reset_struct();
-  strcpy(p.Address,"Mu");
+  reset_struct1();
+  strcpy(p1.Address,"Mu");
   TEST_ASSERT_EQUAL(6, vac_add(1));
-  strcpy(p.Address,"Mummmmmmmmmmmmmmmmmmm");
+  strcpy(p1.Address,"Mummmmmmmmmmmmmmmmmmm");
   TEST_ASSERT_EQUAL(6, vac_add(1));
-  reset_struct();
-  strcpy(p.Contact_no,"90040873");
+  reset_struct1();
+  strcpy(p1.Contact_no,"90040873");
   TEST_ASSERT_EQUAL(7, vac_add(1));
-  strcpy(p.Contact_no,"90040zz873");
+  strcpy(p1.Contact_no,"90040zz873");
   TEST_ASSERT_EQUAL(8, vac_add(1));
-  reset_struct();
-  strcpy(p.Email,"milan.");
+  reset_struct1();
+  strcpy(p1.Email,"milan.");
   TEST_ASSERT_EQUAL(9, vac_add(1));
-  reset_struct();
-  strcpy(p.Problem,"mm");
+  reset_struct1();
+  strcpy(p1.Center_name,"mm");
   TEST_ASSERT_EQUAL(10, vac_add(1));
-  strcpy(p.Problem,"m**m");
+  strcpy(p1.Center_name,"m**m");
   TEST_ASSERT_EQUAL(11, vac_add(1));
-  reset_struct();
-  strcpy(p.Doctor,"LL");
-  TEST_ASSERT_EQUAL(12,vac_add(1));
-   strcpy(p.Doctor,"L***L");
-  TEST_ASSERT_EQUAL(13, vac_add(1));
+  reset_struct1();
+ 
   
 }
 

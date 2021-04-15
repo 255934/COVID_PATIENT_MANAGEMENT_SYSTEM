@@ -1,3 +1,13 @@
+/**
+ * @file LoginScreen.c
+ * @author your name (you@domain.com)
+ * @brief creates a login screen for the  program
+ * @version 0.1
+ * @date 2021-04-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 //HEADER FILES
 #include<stdio.h>//Use for standard I/O Operation
 

@@ -30,8 +30,7 @@ int vac_add(int read);
 int vac_edit(int read,char temp[]);
 int vac_view(int read,char temp[]);
 
-//sets co-ordinates in (x,y).
-struct patient//list of global variable
+typedef struct patient
 {
 	int age;
 	char Gender;
@@ -42,9 +41,21 @@ struct patient//list of global variable
 	char Email[30];
 	char Doctor[20];
 	char Problem[20];
-};
+} patientt;
 
-struct patient  p,temp_c;
+patientt  p,temp_c;
+typedef struct vacinate
+{int age;
+	char Gender;
+	char First_Name[20];
+	char Last_Name[20]; 
+	char Contact_no[15];
+	char Address[30];
+	char Email[30];
+	char Date[20];
+	char Center_name[20];
+} vacinatte;
+vacinatte p1,temp_c1;
 
 
 #endif  /* #define __HOSPITAL__ */

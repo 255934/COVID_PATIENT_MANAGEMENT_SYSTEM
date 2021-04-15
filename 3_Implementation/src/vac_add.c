@@ -1,3 +1,13 @@
+/**
+ * @file vac_add.c
+ * @author your name (you@domain.com)
+ * @brief vacination registration function , stores in database
+ * @version 0.1
+ * @date 2021-04-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 //HEADER FILES
 #include<stdio.h>//Use for standard I/O Operation
 
@@ -28,19 +38,19 @@ int vac_add(int read)
 	printf("\n\t\t\tFirst Name: ");
 	if(read==0)
 	{
-	scanf("%s",p.First_Name);
+	scanf("%s",p1.First_Name);
 	}
-	p.First_Name[0]=toupper(p.First_Name[0]);
-	if(strlen(p.First_Name)>20||strlen(p.First_Name)<2)
+	p1.First_Name[0]=toupper(p1.First_Name[0]);
+	if(strlen(p1.First_Name)>20||strlen(p1.First_Name)<2)
 	{
 		printf("\n\t Invalid :( \t The max range for first name is 20 and min range is 2 :)");
 		return 1;
 	}
 	else
 	{
-		for (bad=0;bad<strlen(p.First_Name);bad++)
+		for (bad=0;bad<strlen(p1.First_Name);bad++)
 		{
-			if (isalpha(p.First_Name[bad]))
+			if (isalpha(p1.First_Name[bad]))
 			{
 				v=1;
 			}
@@ -62,19 +72,19 @@ int vac_add(int read)
 	printf("\n\t\t\tLast Name: ");
 	if(read==0)
 	{
-    scanf("%s",p.Last_Name);
+    scanf("%s",p1.Last_Name);
 	}
-    p.Last_Name[0]=toupper(p.Last_Name[0]);
-    if(strlen(p.Last_Name)>20||strlen(p.Last_Name)<2)
+    p1.Last_Name[0]=toupper(p1.Last_Name[0]);
+    if(strlen(p1.Last_Name)>20||strlen(p1.Last_Name)<2)
 	{
 		printf("\n\t Invalid :( \t The max range for last name is 20 and min range is 2 :)");
 		return 3;
 	}
 	else
 	{
-		for (bad=0;bad<strlen(p.Last_Name);bad++)
+		for (bad=0;bad<strlen(p1.Last_Name);bad++)
 		{
-			if (isalpha(p.Last_Name[bad]))
+			if (isalpha(p1.Last_Name[bad]))
 			{
 				v=1;
 			}
@@ -95,9 +105,9 @@ int vac_add(int read)
 	    printf("\n\t\t\tGender[F/M]: ");
 		if(read==0)
 		{
-		scanf(" %c",&p.Gender);
+		scanf(" %c",&p1.Gender);
 		}
-		if(toupper(p.Gender)=='M'|| toupper(p.Gender)=='F')
+		if(toupper(p1.Gender)=='M'|| toupper(p1.Gender)=='F')
 		{
 			tt =1;
 		}
@@ -115,17 +125,17 @@ int vac_add(int read)
     printf("\n\t\t\tAge:");
 	if(read==0)
 	{
-    scanf(" %i",&p.age);
+    scanf(" %i",&p1.age);
 	}
 /* **************************************** Address ******************************************************************* */    
    
     printf("\n\t\t\tAddress: ");
 	if(read==0)
 	{
-    scanf("%s",p.Address);
+    scanf("%s",p1.Address);
 	}
-    p.Address[0]=toupper(p.Address[0]);
-    if(strlen(p.Address)>20||strlen(p.Address)<4)
+    p1.Address[0]=toupper(p1.Address[0]);
+    if(strlen(p1.Address)>20||strlen(p1.Address)<4)
 	{
 		printf("\n\t Invalid :( \t The max range for address is 20 and min range is 4 :)");
 		return 6;
@@ -137,18 +147,18 @@ int vac_add(int read)
     printf("\n\t\t\tContact no: ");
 	if(read==0)
 	{
-    scanf("%s",p.Contact_no);
+    scanf("%s",p1.Contact_no);
 	}
-    if(strlen(p.Contact_no)>10||strlen(p.Contact_no)!=10)
+    if(strlen(p1.Contact_no)>10||strlen(p1.Contact_no)!=10)
 	{
 		printf("\n\t Sorry :( Invalid. Contact no. must contain 10 numbers. Enter again :)");
 		return 7;
 	}
 	else
 	{
-		for (bad=0;bad<strlen(p.Contact_no);bad++)
+		for (bad=0;bad<strlen(p1.Contact_no);bad++)
 		{
-			if (!isalpha(p.Contact_no[bad]))
+			if (!isalpha(p1.Contact_no[bad]))
 			{
 				v=1;
 			}
@@ -170,9 +180,9 @@ int vac_add(int read)
     printf("\n\t\t\tEmail: ");
 	if(read==0)
 	{
-    scanf("%s",p.Email);
+    scanf("%s",p1.Email);
 	}
-    if (strlen(p.Email)>30||strlen(p.Email)<8)
+    if (strlen(p1.Email)>30||strlen(p1.Email)<8)
     {
        printf("\n\t Invalid :( \t The max range for email is 30 and min range is 8 :)");
 	   return 9;	
@@ -183,19 +193,19 @@ int vac_add(int read)
     printf("\n\t\t\tProblem: ");
 	if(read==0)
 	{
-    scanf("%s",p.Problem);
+    scanf("%s",p1.Center_name);
 	}
-    p.Problem[0]=toupper(p.Problem[0]);
-    if(strlen(p.Problem)>15||strlen(p.Problem)<3)
+    p1.Center_name[0]=toupper(p1.Center_name[0]);
+    if(strlen(p1.Center_name)>15||strlen(p1.Center_name)<3)
 	{
 		printf("\n\t Invalid :( \t The max range for first name is 15 and min range is 3 :)");
 		return 10;
 	}
 	else
 	{
-		for (bad=0;bad<strlen(p.Problem);bad++)
+		for (bad=0;bad<strlen(p1.Center_name);bad++)
 		{
-			if (isalpha(p.Problem[bad]))
+			if (isalpha(p1.Center_name[bad]))
 			{
 				v=1;
 			}
@@ -216,36 +226,12 @@ int vac_add(int read)
     printf("\n\t\t\tPrescribed Doctor:");
 	if(read==0)
 	{
-    scanf("%s",p.Doctor);
+    scanf("%s",p1.Date);
 	}
-    p.Doctor[0]=toupper(p.Doctor[0]);
-    if(strlen(p.Doctor)>30||strlen(p.Doctor)<3)
-	{
-		printf("\n\t Invalid :( \t The max range for first name is 30 and min range is 3 :)");
-		return 12;
-	}
-	else
-	{
-		for (bad=0;bad<strlen(p.Doctor);bad++)
-		{
-			if (isalpha(p.Doctor[bad]))
-			{
-				v=1;
-			}
-			else
-			{
-				v=0;
-				break;
-			}
-		}
-		if(!v)
-		{
-			printf("\n\t\t Doctor name contain Invalid character :(  Enter again :)");
-			return 13;
-		}
-	}
+    ;
+   
     
-    fprintf(ptr," %s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, p.Gender, p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor);
+    fprintf(ptr," %s %s %c %i %s %s %s %s %s\n", p1.First_Name, p1.Last_Name, p1.Gender, p1.age, p1.Address, p1.Contact_no, p1.Email, p1.Center_name, p1.Date);
     printf("\n\n\t\t\t.... Information Record Successful ...");
     fclose(ptr);//ek file is closed
 	return p.age;
