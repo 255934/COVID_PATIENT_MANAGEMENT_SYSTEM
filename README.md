@@ -1,6 +1,6 @@
 # SDLC Activity Based Learning
 
-Visit [Pages for Report -optional](using github.io option)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/c37a5ce0d3c146e58349e71e648c9291)](https://www.codacy.com/gh/255934/COVID_PATIENT_MANAGEMENT_SYSTEM/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=255934/COVID_PATIENT_MANAGEMENT_SYSTEM&amp;utm_campaign=Badge_Grade)
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
