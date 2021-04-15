@@ -36,6 +36,8 @@ int vac_edit(int read, char temp[])
 	   if(ptr==NULL)
 	   {
 		printf("\n\t Can not open file!! ");
+		    fclose(ptr1);
+	   
 	
 		return 0;
 	   }
@@ -59,6 +61,8 @@ int vac_edit(int read, char temp[])
 		if(ptr1==NULL)
 		{
 			printf("\n Can not open file");
+			
+	   		fclose(ptr);
 		
 			return 0;
 		}
