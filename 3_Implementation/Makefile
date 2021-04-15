@@ -37,9 +37,11 @@ run: all
 
 
 coverage:${PROJECT_NAME}
-	gcc -fprofile-arcs -ftest-coverage $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC)  $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-	gcov -a $(SRC)
+	gcov -a Addrec.c Dlt_rec.c Edit_rec.c ex_it.c func_list.c LoginScreen.c MainMenu.c Search_rec.c Title.c WelcomeScreen.c vac_add.c vac_edit.c vac_view.c
+
+
 
 
 staticcheck:
