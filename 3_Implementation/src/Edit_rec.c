@@ -105,11 +105,10 @@ int Edit(int read, char temp[])
 			    printf("\nPress U charecter for the Updating operation : ");
 				scanf("%c",&ch);
 				
-				if(ch=='u' || ch=='U')
-				{
+			
 				fprintf(ptr1,"%s %s %c %i %s %s %s %s %s\n",p.First_Name,p.Last_Name,p.Gender, p.age,p.Address,p.Contact_no,p.Email,p.Problem,p.Doctor);
 				printf("\n\n\t\t\tPatient record updated successfully...");
-				}					
+								
 			}
 			else
 			{
