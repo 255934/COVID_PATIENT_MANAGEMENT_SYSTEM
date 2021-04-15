@@ -36,6 +36,8 @@ int Edit(int read, char temp[])
 	   if(ptr==NULL)
 	   {
 		printf("\n\t Can not open file!! ");
+		fclose(ptr1);
+	   	
 	
 		return 0;
 	   }
@@ -60,6 +62,7 @@ int Edit(int read, char temp[])
 		{
 			printf("\n Can not open file");
 			
+	   		fclose(ptr);
 			return 0;
 		}
 		while(fscanf(ptr,"%s %s %c %i %s %s %s %s %s\n", p.First_Name, p.Last_Name, &p.Gender, &p.age, p.Address, p.Contact_no, p.Email, p.Problem, p.Doctor)!=EOF)
