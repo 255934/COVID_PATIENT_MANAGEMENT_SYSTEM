@@ -16,6 +16,10 @@
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
 #include "covid_management.h"
+/**
+ * @brief title screen for the program
+ * 
+ */
 void Title(void)//function for title screen
 {
 	printf("\n\n\t\t----------------------------------------------------------------------------------");

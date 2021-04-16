@@ -6,6 +6,10 @@
 #include<string.h>//Use for strcmp(),strcpy(),strlen(),etc
 #include<stdlib.h>
 #include "covid_management.h"
+/**
+ * @brief provides welcome screen for the program
+ * 
+ */
 void WelcomeScreen(void) //function for welcome screen
 {
 	

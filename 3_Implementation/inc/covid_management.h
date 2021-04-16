@@ -1,7 +1,7 @@
 /**
  * @file covid_management.h
  * @author your name (you@domain.com)
- * @brief 
+ * @brief the program is called covid management system
  * @version 0.1
  * @date 2021-04-10
  * 
@@ -16,18 +16,95 @@ extern int tt;
 extern int bad, v;
 
 //FUNCTION DECLERATION
+/**
+ * @brief provides welcome screen for the program
+ * 
+ */
 void WelcomeScreen(void);//WelcomeScreen function decleration
+/**
+ * @brief title screen for the program
+ * 
+ */
 void Title(void);//Title function decleration
+/**
+ * @brief presents the main menu
+ * 
+ * @param read  used to determine if the function is used for testing
+ * @return int 
+ */
 int MainMenu(int read);//MainMenu function decleration
+/**
+ * @brief provides the login screen and other options
+ * 
+ */
 void LoginScreen(void);//LoginScreen function decleration
+/**
+ * @brief adds the details of patient
+ * 
+ * @param read  value determines if test is performed or not
+ * @return int 
+ */
 int Add(int read);//Add_rec function declaration
+/**
+ * @brief prints all the values in database
+ * 
+ * @param useless  has no functionality other than testing
+ * @return int 
+ */
 int func_list(int temp);//function to list the patient details 
+/**
+ * @brief used to search records for the database
+ * 
+ * @param read  determines if the function is being useds to test or not
+ * @param temp  passing string for testing
+ * @return int 
+ */
 int Search(int read,char temp[]);//Search_rec function declaration
+/**
+ * @brief used to edit records for the database
+ * 
+ * @param read  determines if the function is being useds to test or not
+ * @param temp  passing string for testing
+ * @return int 
+ */
 int Edit(int read,char temp[]);//Edit_rec function declaration
+/**
+ * @brief used to delete records for the database
+ * 
+ * @param read  determines if the function is being useds to test or not
+ * @param temp  passing string for testing
+ * @return int 
+ */
 int Deletes(int read,char temp[]);//Dlt_rec function declaration
+/**
+ * @brief exiting the system
+ * 
+ * @param useless  has no functionality but to test the function
+ * @return int 
+ */
 int ex_it(int temp);//exit function declaration
+/**
+ * @brief adds the details of vaccine registration
+ * 
+ * @param read  value determines if test is performed or not
+ * @return int 
+ */
 int vac_add(int read);
+/**
+ * @brief used to edit records for the database
+ * 
+ * @param read  determines if the function is being useds to test or not
+ * @param temp  passing string for testing
+ * @return int 
+ */
 int vac_edit(int read,char temp[]);
+/**
+ * @brief used to search records for the database
+ * 
+ * @param read  determines if the function is being useds to test or not
+ * @param temp  passing string for testing
+ * @return int 
+ */
 int vac_view(int read,char temp[]);
 
 typedef struct patient
